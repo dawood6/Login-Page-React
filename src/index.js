@@ -1,10 +1,8 @@
 import React from 'react';
-import { render } from 'react-dom';
 import Login from './Components/Login'
 import App from './Components/App'
-import { BrowserRouter as Router , Switch, Route } from 'react-router-dom'; 
-
-
+import { BrowserRouter as Router , Switch, Route } from 'react-router-dom';
+import { render } from 'react-dom';
 
 function Index() {
     return(
@@ -18,5 +16,7 @@ function Index() {
         </div>
     )
 }
+
+
 
 render(<Index />, document.getElementById('root'))
