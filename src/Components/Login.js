@@ -3,7 +3,8 @@ import { withRouter } from "react-router";
 class Login extends Component {
   state = {
     username: "",
-    password: ""
+    password: "",
+    isLoggedIn: false
   };
 
   handleChangeUsername = event => {
@@ -18,6 +19,7 @@ onClick = () => {
 let {username , password} = this.state
 if (username === 'dawood6' && password === 'dawood123'){
   this.props.history.push('/App')
+  
 } else {
     alert('incorrect')
 }
