@@ -1,0 +1,21 @@
+#main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+}
+input {
+    display: block;
+}
+#username {
+    background-color: white;
+    background-image: url(../user.svg);
+    background-repeat: no-repeat;
+    padding-left: 40px;
+}
+#password {
+    background-color: white;
+    background-image: url(../user-lock.svg);
+    background-repeat: no-repeat;
+    padding-left: 40px;
+}
