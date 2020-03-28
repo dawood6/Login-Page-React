@@ -1,11 +1,11 @@
 import React, { Fragment, Component } from "react";
 import HigherOrderComponent from './HOC'
 import App from './App'
+import { withRouter } from 'react-router-dom'
 class Login extends Component {
   state = {
     username: "",
     password: "",
-    isLoggedIn: false
   };
 
   handleChangeUsername = event => {
@@ -15,15 +15,15 @@ class Login extends Component {
     this.setState({ password: event.target.value });
   };
 
-onClick = () => {
-let {username , password} = this.state
-if (username === 'dawood6' && password === 'dawood123'){
-  this.props.history.push('/App')
-  this.setState({isLoggedIn: true})
-} else {
-    alert('incorrect')
-}
-}
+  onClick = () => {
+    let { username, password } = this.state
+    if (username === 'dawood6' && password === 'dawood123') {
+      this.props.loginUser()
+      this.props.history.push('/App')
+    } else {
+      alert('incorrect')
+    }
+  }
 
 
 
@@ -45,10 +45,10 @@ if (username === 'dawood6' && password === 'dawood123'){
         <button type="submit" onClick={this.onClick}>click</button>
         {console.log(this.state.password)}
 
-        <HigherOrderComponent  isLoggedIn={this.state.isLoggedIn} component={App} />
+        <HigherOrderComponent isLoggedIn={this.state.isLoggedIn} component={App} />
       </Fragment>
     );
   }
 }
 
-export default Login;
+export default withRouter(Login);

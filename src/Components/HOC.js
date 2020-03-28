@@ -1,12 +1,10 @@
- import React, { Fragment, Component } from "react";
- import App from './App'
+import React, { Fragment, Component } from "react";
+import { Route, Redirect } from 'react-router-dom'
 
- const HigherOrderComponent = ({ isLoggedIn }) => {
-    return (
-      <Fragment>
-        {isLoggedIn ? <App /> : <div>You are not authorized to view this component</div>}
-      </Fragment>
-    )
-  }
+const HigherOrderComponent = ({ component: Component, isLoggedIn, ...rest }) => {
+  return (
+    <Route {...rest} render={(props) => isLoggedIn ? <Component {...props} /> : <Redirect to={{ pathname: "/" }} />} />
+  )
+}
 
-  export default HigherOrderComponent
+export default HigherOrderComponent
