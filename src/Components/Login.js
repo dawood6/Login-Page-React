@@ -24,7 +24,10 @@ class Login extends Component {
     if (username === "dawood6" && password === "dawood123") {
       this.props.loginUser();
       this.props.history.push("/home");
-    } else {
+    } if (username === "" && password === "") {
+      alert("Please Enter Your Username And Password")
+    }
+     else {
       alert("incorrect");
     }
   };
