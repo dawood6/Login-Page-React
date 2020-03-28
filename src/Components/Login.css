@@ -1,3 +1,8 @@
+h1 {
+    text-align: center;
+    font-size: 40px;
+    color: #08d88d;   
+}
 #main {
     display: flex;
     justify-content: center;
@@ -6,6 +11,16 @@
 }
 input {
     display: block;
+    margin: 20px;
+    padding: 0px 35px 0px 0px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    color: #0eb5a3;
+    font-size: 16px;
+}
+input:focus {
+    outline: none;
 }
 #username {
     background-color: white;
@@ -18,4 +33,18 @@ input {
     background-image: url(../user-lock.svg);
     background-repeat: no-repeat;
     padding-left: 40px;
+}
+button {
+    text-align: center;
+    margin: 0px 0px 0px 100px;
+    background-color: white;
+    border: 1px solid #08d88d;
+    padding: 5px 30px 5px 30px;
+    box-shadow: none;
+    border-radius: 15px;
+}
+button:hover {
+    background-image: linear-gradient(270deg,#08d88d,#0eb5a3);
+    border: 2px solid #08d88d;
+    color: white;
 }
