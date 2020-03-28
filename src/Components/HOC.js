@@ -1,4 +1,4 @@
-import React, { Fragment, Component } from "react";
+import React, {  Component } from "react";
 import { Route, Redirect } from 'react-router-dom'
 
 const HigherOrderComponent = ({ component: Component, isLoggedIn, ...rest }) => {
