@@ -3,6 +3,9 @@ h1 {
     font-size: 40px;
     color: #08d88d;   
 }
+h1:hover {
+    color: #0eb5a3;
+}
 #main {
     display: flex;
     justify-content: center;
